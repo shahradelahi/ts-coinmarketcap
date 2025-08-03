@@ -1,5 +1,5 @@
-<div align="center">
-<h3>ts-coinmarketcap</h3>
+<h1 align="center">
+  <sup>ts-coinmarketcap</sup>
 <br>
 <a href="https://github.com/shahradelahi/ts-coinmarketcap/actions/workflows/ci.yml">
   <img src="https://github.com/shahradelahi/ts-coinmarketcap/actions/workflows/ci.yml/badge.svg" alt="CI">
@@ -13,10 +13,11 @@
 <a href="https://packagephobia.com/result?p=ts-coinmarketcap">
   <img src="https://packagephobia.com/badge?p=ts-coinmarketcap" alt="Install Size">
 </a>
+</h1>
 
-_ts-coinmarketcap_ is a modern, lightweight, and fully-typed TypeScript client for the [CoinMarketCap](https://coinmarketcap.com) API.
-
-</div>
+<p align="center">
+<i>ts-coinmarketcap</i> is a modern, lightweight, and fully-typed TypeScript client for the <a href="https://coinmarketcap.com">CoinMarketCap</a> API.
+</p>
 
 ---
 
