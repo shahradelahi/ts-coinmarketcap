@@ -1,0 +1,31 @@
+/**
+ * @description Defines the possible time intervals for historical data.
+ */
+export type Interval =
+  | 'yearly'
+  | 'monthly'
+  | 'weekly'
+  | 'daily'
+  | 'hourly'
+  | '5m'
+  | '10m'
+  | '15m'
+  | '30m'
+  | '45m'
+  | '1h'
+  | '2h'
+  | '3h'
+  | '4h'
+  | '6h'
+  | '12h'
+  | '24h'
+  | '1d'
+  | '2d'
+  | '3d'
+  | '7d'
+  | '14d'
+  | '15d'
+  | '30d'
+  | '60d'
+  | '90d'
+  | '365d';

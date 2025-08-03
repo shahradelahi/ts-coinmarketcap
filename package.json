@@ -1,0 +1,85 @@
+{
+  "name": "ts-coinmarketcap",
+  "version": "0.0.0",
+  "description": "A modern, lightweight, and fully-typed TypeScript client for the CoinMarketCap API.",
+  "keywords": [
+    "coinmarketcap",
+    "api",
+    "client",
+    "crypto",
+    "cryptocurrency",
+    "typescript",
+    "wrapper",
+    "btc",
+    "eth",
+    "bitcoin",
+    "ethereum",
+    "blockchain",
+    "market-data"
+  ],
+  "homepage": "https://github.com/shahradelahi/ts-coinmarketcap#readme",
+  "repository": "github:shahradelahi/ts-coinmarketcap",
+  "license": "MIT",
+  "author": "Shahrad Elahi <shahrad@litehex.com> (https://github.com/shahradelahi)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
+    },
+    "./types/*": "./dist/types/*/index.d.ts"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**",
+    "!types/**/*.js",
+    "!**/*.d.cts"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "git clean -fdx node_modules dist .tsbuildinfo",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "pnpm typecheck && eslint .",
+    "lint:fix": "eslint --fix .",
+    "prepublishOnly": "pnpm build && pnpm test && pnpm lint && pnpm format:check",
+    "test": "mocha",
+    "typecheck": "tsc --noEmit"
+  },
+  "prettier": "@shahrad/prettier-config",
+  "dependencies": {
+    "@se-oss/rand": "^1.1.0",
+    "cheerio": "^1.1.0",
+    "deepmerge": "^4.3.1",
+    "ky": "^1.8.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@shahrad/eslint-config": "^1.0.0",
+    "@shahrad/prettier-config": "^1.2.2",
+    "@shahrad/tsconfig": "^1.1.0",
+    "@types/chai": "^5.2.1",
+    "@types/cheerio": "^1.0.0",
+    "@types/lodash": "^4.17.20",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.13.13",
+    "chai": "^5.2.0",
+    "dotenv": "^16.5.0",
+    "eslint": "^9.23.0",
+    "globals": "^16.0.0",
+    "mocha": "^11.1.0",
+    "prettier": "^3.5.3",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

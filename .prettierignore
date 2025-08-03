@@ -1,0 +1,76 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+.bower_components/
+
+# Build output
+/build/
+/dist/
+/out/
+/target/
+.lib/
+/esm/
+/cjs/
+.next/
+.cache/
+/public
+.nuxt/
+/.svelte-kit
+*.tsbuildinfo
+
+# Test & coverage
+coverage/
+nyc_output/
+jest/
+test-results/
+*.lcov
+
+# Logs & runtime data
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+pids/
+*.pid
+*.pid.lock
+*.seed
+
+# Vercel & other deployment
+.vercel
+.contentlayer
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Package manager lockfiles
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# IDE / editor
+.vscode/
+/.vscode-test/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Miscellaneous
+.changeset/
+.grunt/
+lib-cov/
+.DS_Store
+Thumbs.db
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
