@@ -51,7 +51,7 @@
   "prettier": "@shahrad/prettier-config",
   "dependencies": {
     "@se-oss/rand": "^1.1.0",
-    "cheerio": "^1.1.0",
+    "cheerio": "^1.1.2",
     "deepmerge": "^4.3.1",
     "ky": "^1.8.1",
     "lodash": "^4.17.21"
@@ -60,22 +60,22 @@
     "@shahrad/eslint-config": "^1.0.0",
     "@shahrad/prettier-config": "^1.2.2",
     "@shahrad/tsconfig": "^1.1.0",
-    "@types/chai": "^5.2.1",
+    "@types/chai": "^5.2.2",
     "@types/cheerio": "^1.0.0",
     "@types/lodash": "^4.17.20",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^22.13.13",
-    "chai": "^5.2.0",
-    "dotenv": "^16.5.0",
-    "eslint": "^9.23.0",
-    "globals": "^16.0.0",
-    "mocha": "^11.1.0",
-    "prettier": "^3.5.3",
-    "tsup": "^8.4.0",
-    "tsx": "^4.19.3",
-    "typescript": "^5.8.2"
+    "@types/node": "^22.16.5",
+    "chai": "^5.2.1",
+    "dotenv": "^16.6.1",
+    "eslint": "^9.32.0",
+    "globals": "^16.3.0",
+    "mocha": "^11.7.1",
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
   },
-  "packageManager": "pnpm@9.15.6",
+  "packageManager": "pnpm@9.15.9",
   "engines": {
     "node": ">=18"
   },
