@@ -1,5 +1,5 @@
 import deepmerge from 'deepmerge';
-import lodash from 'lodash';
+import * as lodash from 'lodash-es';
 
 import type { RequestOptions } from '@/types';
 import type { GetQuotesLatestParams } from '@/types/v2';

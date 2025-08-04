@@ -1,5 +1,5 @@
 import deepmerge from 'deepmerge';
-import lodash from 'lodash';
+import * as lodash from 'lodash-es';
 
 import type { CoinMarketCap } from '@/client';
 import type { RequestOptions } from '@/types';
