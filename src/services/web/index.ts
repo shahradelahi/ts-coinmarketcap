@@ -1,4 +1,4 @@
-import * as cheerio from 'cheerio';
+import { DOMParser } from '@xmldom/xmldom';
 import deepmerge from 'deepmerge';
 import type { Options } from 'ky';
 
@@ -114,8 +114,10 @@ export class WebService {
       deepmerge({ responseType: 'text', prefixUrl: '' }, options)
     );
 
-    const $ = cheerio.load(response);
-    const nextData = JSON.parse($('script#__NEXT_DATA__').html() || '{}');
+    const doc = new DOMParser().parseFromString(response, 'text/html');
+    const nextDataScript = doc.getElementById('__NEXT_DATA__');
+    const nextDataJson = nextDataScript?.textContent || '{}';
+    const nextData = JSON.parse(nextDataJson);
     return nextData;
   }
 
@@ -134,12 +136,19 @@ export class WebService {
     const url = `https://coinmarketcap.com/currencies/${slug}/`;
     const nextData = await this.#getNextData(url, options);
 
-    const faqDescription = nextData.props.pageProps.detailRes.cdpFaqData.faqDescription;
+    const faqDescription = nextData.props.pageProps.cdpFaqData.faqDescription as {
+      q: string;
+      a: string;
+      isQ: boolean;
+    }[];
 
-    const about: AboutSection[] = faqDescription.map((item: { q: string; a: string }) => ({
-      title: item.q,
-      content: item.a,
-    }));
+    const about = faqDescription.map(
+      (item): AboutSection => ({
+        title: item.q,
+        content: item.a,
+        isQuestion: item.isQ,
+      })
+    );
 
     return {
       data: about,
