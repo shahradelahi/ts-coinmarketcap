@@ -7,6 +7,7 @@ export interface GetAboutSectionParams {
 export interface AboutSection {
   title: string;
   content: string;
+  isQuestion: boolean;
 }
 
 export type AboutData = AboutSection[];

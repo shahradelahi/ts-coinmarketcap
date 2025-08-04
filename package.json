@@ -51,7 +51,7 @@
   "prettier": "@shahrad/prettier-config",
   "dependencies": {
     "@se-oss/rand": "^1.1.0",
-    "cheerio": "^1.1.2",
+    "@xmldom/xmldom": "^0.9.8",
     "deepmerge": "^4.3.1",
     "ky": "^1.8.1",
     "lodash": "^4.17.21"
@@ -61,7 +61,6 @@
     "@shahrad/prettier-config": "^1.2.2",
     "@shahrad/tsconfig": "^1.1.0",
     "@types/chai": "^5.2.2",
-    "@types/cheerio": "^1.0.0",
     "@types/lodash": "^4.17.20",
     "@types/mocha": "^10.0.10",
     "@types/node": "^22.16.5",
